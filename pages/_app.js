@@ -1,11 +1,14 @@
 import '../styles/globals.css'
-import { ProvideAuth } from '../lib/auth'
+import { AuthProvider } from '../lib/auth'
+import { ThemeProvider } from '@emotion/react'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ProvideAuth>
-      <Component {...pageProps} />
-    </ProvideAuth>
+    <ThemeProvider theme={theme}>
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 
