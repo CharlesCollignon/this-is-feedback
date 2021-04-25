@@ -21,7 +21,10 @@ const Home = () => {
         {auth.user ? (
           <Button onClick={(e) => auth.signout()}>Sign Out</Button>
         ) : (
-          <Button onClick={(e) => auth.signinWithGitHub()}>Sign in with GH</Button>
+          <div>
+            <Button onClick={(e) => auth.signinWithGitHub()}>Sign in with GitHub</Button>
+            <Button onClick={(e) => auth.signinWithGoogle()}>Sign in with Google</Button>
+          </div>
         )}
       </main>
     </div>
