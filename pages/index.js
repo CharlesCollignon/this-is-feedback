@@ -1,21 +1,27 @@
-import { useAuth } from '../lib/auth'
+import { useAuth } from '@/lib/auth'
+import Head from 'next/head'
+
+import { Button, Heading, Text, Code } from '@chakra-ui/core'
 
 
 const Home = () => {
   const auth = useAuth()
 
   return (
-    <div>
-      <main>
-        <h1>This is Feedback</h1>
+    <div className="container">
+      <Head>
+        <title>This is Feedback</title>
+      </Head>
 
-        <p>
-          Current user: <code>auth.user ? auth.user.email</code>
-        </p>
+      <main>
+        <Heading>This is Feedback</Heading>
+        <Text>
+          Current user: <Code>auth.user ? auth.user.email</Code>
+        </Text>
         {auth.user ? (
-          <button onClick={(e) => auth.signout()}>Sign Out</button>
+          <Button onClick={(e) => auth.signout()}>Sign Out</Button>
         ) : (
-          <button onClick={(e) => auth.signinWithGitHub()}>Sign in with GH</button>
+          <Button onClick={(e) => auth.signinWithGitHub()}>Sign in with GH</Button>
         )}
       </main>
     </div>
