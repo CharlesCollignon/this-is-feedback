@@ -5,10 +5,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>This is Feedback</title>
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+          <link rel="icon" href="/favicon.ico"/>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
@@ -18,5 +19,4 @@ class MyDocument extends Document {
     )
   }
 }
-
 export default MyDocument
